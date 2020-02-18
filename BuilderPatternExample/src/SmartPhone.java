@@ -10,16 +10,6 @@ public class SmartPhone {
 	private int cores;
 	private int battery;
 
-	public SmartPhone(Builder builder) {
-		this.brand = builder.brand;
-		this.year = builder.year;
-		this.model = builder.model;
-		this.diagonal = builder.diagonal;
-		this.memory = builder.memory;
-		this.cores = builder.cores;
-		this.battery = builder.battery;
-	}
-
 	@Override
 	public String toString() {
 		return "SmartPhone [brand=" + brand + ", year=" + year + ", model=" + model + ", diagonal=" + diagonal
@@ -63,6 +53,16 @@ public class SmartPhone {
 			return new SmartPhone(this);
 		}
 
+	}
+
+	private SmartPhone(Builder builder) {
+		this.brand = builder.brand;
+		this.year = builder.year;
+		this.model = builder.model;
+		this.diagonal = builder.diagonal;
+		this.memory = builder.memory;
+		this.cores = builder.cores;
+		this.battery = builder.battery;
 	}
 
 }
